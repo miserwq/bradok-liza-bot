@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 TELEGRAM_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 ALLOWED_CHAT_ID = os.getenv("ALLOWED_CHAT_ID", "")
+print("Проверка ID:", repr(ALLOWED_CHAT_ID))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-6")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
